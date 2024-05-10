@@ -28,7 +28,7 @@ function ChangePassword() {
       try {
         setIsLoading(true)
         axios.post(
-          "http://localhost:8080/forgot-password/change-password",
+          "https://vimal-sakseria.onrender.com/forgot-password/change-password",
           formData
         );
         navigate("/login");

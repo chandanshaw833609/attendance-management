@@ -18,7 +18,7 @@ function GenerateOtp() {
     try {
       setIsLoading(true);
       await axios.post(
-        `http://localhost:8080/forgot-password/generateOtp/${email}`
+        `https://vimal-sakseria.onrender.com/forgot-password/generateOtp/${email}`
       );
       navigate("/verify-otp");
     } catch (error) {

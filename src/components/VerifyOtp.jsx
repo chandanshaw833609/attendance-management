@@ -16,7 +16,7 @@ function VerifyOtp() {
     try {
         setIsLoading(true)
       await axios.post(
-        `http://localhost:8080/forgot-password/verifyOtp/${email}/${otp}`
+        `https://vimal-sakseria.onrender.com/forgot-password/verifyOtp/${email}/${otp}`
       );
       navigate("/change-password");
     } catch (error) {
