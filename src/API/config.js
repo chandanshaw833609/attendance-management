@@ -99,7 +99,7 @@ export async function getAllEmployee() {
   try {
     return await axios.get(url + "/employee", {
       headers: getHeader(),
-    });
+    }); 
   } catch (error) {
     throw error;
   }
@@ -123,10 +123,10 @@ export async function loginEmployee(data) {
   }
 }
 
-export async function fetchAttendanceByDate(selectedDate) {
+export async function fetchAttendanceByDate() {
   try {
     return await axios.get(
-      `http://localhost:8080/attendance/${selectedDate}`,
+      `http://localhost:8080/attendance/today/all`,
       {
         headers: getHeader(),
       }

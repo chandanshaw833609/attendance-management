@@ -21,13 +21,9 @@ export function Dashboard() {
     month + "-" + currentDate.getDate() + "-" + currentDate.getFullYear()
   );
 
-  const {
-    data: attendances,
-    isLoading: attendanceLoading,
-    isError: attendanceError,
-  } = useQuery(
-    ["attendance", selectedDate], // Query key
-    () => fetchAttendanceByDate(selectedDate)
+  const { data: attendances, isLoading: attendanceLoading } = useQuery(
+    ["attendance"],
+    fetchAttendanceByDate
   );
 
   // const token = localStorage.getItem("token")
@@ -42,7 +38,6 @@ export function Dashboard() {
     isLoading,
     isError,
   } = useQuery("allEmployees", getAllEmployee);
-
 
   const handleDateChange = (date) => {
     const selectedDate = date;
